@@ -1,0 +1,59 @@
+<style>
+    body {
+        margin: 0
+    }
+
+    .icon-bar {
+        width: 4rem;
+        background-color: #555;
+    }
+
+    .icon-bar a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 1rem;
+    }
+
+    .icon-bar a:hover {
+        background-color: #000;
+    }
+
+    .active {
+        background-color: #0439aa;
+    }
+
+    #facebook {
+        background: #3B5998;
+        color: white;
+    }
+
+    #linkedin {
+        background: #007bb5;
+        color: white;
+    }
+
+    #Quora {
+        background: #bb0000;
+        color: white;
+    }
+   
+</style>
+
+<div class="icon-bar fixed-top">
+    <a {{hactive}} href="{% url 'home' %}" data-bs-toggle="tooltip" data-bs-placement="right" title="Home" ><i class="fa fa-home"></i></a>
+    <a {{aactive}} href="{% url 'about' %}" data-bs-toggle="tooltip" data-bs-placement="right" title="About"><i class="fa fa-user"></i></a>
+    <a {{cactive}} href="{% url 'contact' %}" data-bs-toggle="tooltip" data-bs-placement="right" title="Contact"><i class="fa fa-envelope"></i></a>
+    <a {{dactive}} href="{% url 'login' %}" data-bs-toggle="tooltip" data-bs-placement="right" title="Login"><i class="fa fa-sign-in"></i></a>
+</div>
+<div class="icon-bar fixed-bottom">
+    <a {{cactive}} id="facebook" href="https://www.facebook.com/vaibhav.shrimali.16/" target="blank"><i
+            class="fa fa-facebook"></i></a>
+    <a {{cactive}} id="linkedin" href="https://www.linkedin.com/in/vaibhav-shrimali-01a806a6/" target="blank"><i
+            class="fa fa-linkedin"></i></a>
+    <a {{cactive}} id="Quora" href="https://www.quora.com/profile/Vaibhav-Shrimali-2" target="blank"><i
+            class="fa fa-quora"></i></a>
+        
+</div>
